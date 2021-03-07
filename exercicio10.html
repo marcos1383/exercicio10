@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+
+
+    <script type="text/javascript">
+        //questao 1
+        function mediaPonderada() {
+            var primeira = document.getElementById("primeira").value;
+            var segunda = document.getElementById("segunda").value;
+            var terceira = document.getElementById("terceira").value;
+            var mediaPonderada = parseInt(primeira * 2) + parseInt(segunda * 3) + parseInt(terceira * 5);
+
+            document.getElementById("resultado01").innerHTML = "Resultado: A média das 3 notas foi: " + (mediaPonderada / 10);
+        }
+
+
+        //questao 2
+        function senhaFixa() {
+
+            var senhaDefinida = document.getElementById("password").value;
+
+            if (senhaDefinida == 2002) {
+                document.getElementById("resultado2").innerHTML = "Resultado: senha correta";
+            } else {
+                document.getElementById("resultado2").innerHTML = "Resultado: senha incorreta";
+            }
+        }
+
+        //questao 3
+        function intervalo() {
+
+            var valorIntervalo = document.getElementById("valor").value;
+
+            if (valorIntervalo >= 0 && valorIntervalo <= 25.0000) {
+                document.getElementById("resultado3").innerHTML = "Resultado: O valor digita esta no intervalo [0,25]\n";
+
+            } else if (valorIntervalo >= 25.00001 && valorIntervalo <= 50.0000000) {
+                document.getElementById("resultado3").innerHTML = "Resultado: O valor digita esta no intervalo (25,50]\n";
+
+            } else if (valorIntervalo >= 50.00001 && valorIntervalo <= 75.0000000) {
+                document.getElementById("resultado3").innerHTML = "Resultado: O valor digita esta no intervalo (50,75)\n";
+
+            } else if (valorIntervalo >= 75.00001 && valorIntervalo <= 100.0000000) {
+                document.getElementById("resultado3").innerHTML = "Resultado: O valor digita esta no intervalo (75,100]\n";
+
+            } else {
+                document.getElementById("resultado3").innerHTML = "Resultado: Fora de intervalo\n";
+
+            }
+
+        }
+
+        //questao 4
+        function aumentoDeSalario() {
+
+            var aumento = document.getElementById("atual").value;
+
+            if (aumento >= 0.00 && aumento <= 400.00) {
+                document.getElementById("resultado4").innerHTML = "Novo salario: %.2f\n";
+                document.getElementById("resultado4").innerHTML = "Reajuste ganho: %.2f\n";
+                document.getElementById("resultado4").innerHTML = "Em percentual: 15 %";
+            } else if (aumento >= 400.01 && aumento <= 800.00) {
+                document.getElementById("resultado4").innerHTML = "Novo salario: %.2f\n";
+                document.getElementById("resultado4").innerHTML = "Reajuste ganho: %.2f\n";
+                document.getElementById("resultado4").innerHTML = "Em percentual: 12 %";
+            } else if (aumento >= 800.01 && aumento <= 1200.00) {
+                document.getElementById("resultado4").innerHTML = "Novo salario: %.2f\n";
+                document.getElementById("resultado4").innerHTML = "Reajuste ganho: %.2f\n";
+                document.getElementById("resultado4").innerHTML = "Em percentual: 10 %";
+            } else if (aumento >= 1200.01 && aumento <= 2000.00) {
+                document.getElementById("resultado4").innerHTML = "Novo salario: %.2f\n";
+                document.getElementById("resultado4").innerHTML = "Reajuste ganho: %.2f\n";
+                document.getElementById("resultado4").innerHTML = "Em percentual: 7 %";
+            } else if (aumento >= 2000.01) {
+                document.getElementById("resultado4").innerHTML = "Novo salario: %.2f\n" ;
+                document.getElementById("resultado4").innerHTML = "Reajuste ganho: %.2f\n";
+                document.getElementById("resultado4").innerHTML = "Em percentual: 4 %";
+            }
+
+        }
+
+
+    </script>
+
+
+
+</head>
+<style>
+    input {
+        display: block;
+    }
+
+    h1 {
+        font-size: 16px;
+        margin-bottom: 0px;
+        margin-bottom: 6px;
+    }
+
+    span {
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: darkblue;
+    }
+
+    p {
+        margin: 0px;
+    }
+
+    body {
+        width: 40%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .questao {
+        background-color: #e0f7faa1;
+        padding: 1px 0px 10px 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+
+    }
+
+    .questao:hover {
+        background-color: #e0f7fa;
+    }
+
+    input[type=button] {
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+    <div id="corpo">
+        <div class="questao">
+            <h1>Questã 01:<span>Calcular a média ponderada de 3 notas
+                    <a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1006"
+                        target="_blank">detalhar</a></span></h1>
+            <p id="resultado01">Resultado: A média das 3 notas foi xx.</p>
+            <label for="">Nota 01:</label>
+            <input type="text" id="primeira">
+            <label for="">Nota 02:</label>
+            <input type="text" id="segunda">
+            <label for="">Nota 03:</label>
+            <input type="text" id="terceira">
+            <button id="botao1" onclick="mediaPonderada()">Calcular</button>
+        </div>
+
+        <div class="questao">
+            <h1>Questã 02:<span> Senha Fixa <a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1114"
+                        target="_blank">detalhar</a></span></h1>
+            <p id="resultado2">Resultado: xxxxx</p>
+            <label for="">Digite a senha:</label>
+            <input type="password" id="password">
+            <button id="" onclick="senhaFixa()">Calcular</button>
+        </div>
+
+        <div class="questao">
+            <h1>Questã 03:<span> Intervalo [0,25], [25,50], [50,75], [75,100] <a
+                        href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1037"
+                        target="_blank">detalhar</a></span></h1>
+            <p id="resultado3">Resultado: O valor digita esta no intervalo [xx,xx].</p>
+            <label for="">Valor:</label>
+            <input type="text" id="valor">
+            <button onclick="intervalo()">Calcular</button>
+
+        </div>
+        <div class="questao">
+            <h1>Questã 04:<span> Aumento de Salário <a
+                        href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1048"
+                        target="_blank">detalhar</a></span></h1>
+            <p id="resultado4">Resultado: Novo salario: xx.xx, Ganho: xx.xx, Percentual: xx%</p>
+            <label for="">Salário atual:</label>
+            <input type="text" id="atual">
+            <button onclick="aumentoDeSalario">Calcular</button>
+        </div>
+        <div class="questao">
+            <h1>Questã 05:<span> Imposto de Renda <a
+                        href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1051"
+                        target="_blank">detalhar</a></span></h1>
+            <p id="">Resultado:Imposto xxxxx</p>
+            <label for="">Renda:</label>
+            <input type="text" id="">
+            <input type="button" value="Calcular">
+        </div>
+    </div>
+</body>
+
+</html>
